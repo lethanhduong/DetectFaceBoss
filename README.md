@@ -1,0 +1,1 @@
+[get_frontal_face_detector](https://www.arunponnusamy.com/cnn-face-detector-dlib.html)
