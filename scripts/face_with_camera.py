@@ -7,7 +7,6 @@ from random import randint
 
 
 def get_face_camera(folder_out):
-    print(folder_out)
     if not os.path.exists(folder_out):
         os.makedirs(folder_out)
 
@@ -47,13 +46,9 @@ def get_face_camera(folder_out):
                 b = reindex_y(int(face.bottom() / scale))
                 
                 # draw box over face
-                
-                #==== Thêm padding để có thể cắt trọn khuôn mặt hơn.
                 padding = 0
                 sub_img = frame[y - padding:b + padding, x - padding:r + padding]
                 
-                #===== Save image với tên random
-
                 if i % 20 == 0:
                     image_name_out = os.path.join(folder_out, str(randint(0, 10000000000)) + extention)
                     cv2.imwrite(image_name_out, sub_img)
