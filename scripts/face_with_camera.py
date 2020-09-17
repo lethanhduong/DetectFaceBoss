@@ -34,7 +34,6 @@ def get_face_camera(folder_out):
             faces_hog = hog_face_detector(frame)
             frame_h, frame_w, _ = frame.shape
             
-            #===== Định nghĩa funtion
             reindex_x = lambda x: max(min(x, frame_w), 1)
             reindex_y = lambda x: max(min(x, frame_h), 1)
             
